@@ -88,11 +88,11 @@ ul li a.active{
         width: 100%;
         position: fixed;
         z-index: 100;
-        height: 15vw;
+        height: 16vw;
     }
     
     .contenido{
-        padding-top: 325px;
+        padding-top: 260px;
     }
     
     .navbar-toggler{
@@ -101,7 +101,7 @@ ul li a.active{
     }
     
     .logo img{
-        height: 240px;
+        height: 200px;
     }
     .offcanvas-body a{
         color: rgb(0, 0, 0);
