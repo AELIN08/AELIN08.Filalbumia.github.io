@@ -1,0 +1,1157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!---llamo al archivo CSS de Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- llama al archivo de CSS-->
+    <link rel="stylesheet" href="style.css">
+
+    <title>Filalbumia</title>
+
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-transparent">
+            <div class="container">
+                <!--LOGO-->
+                <div class="logo">
+                    <img src="./imagenes/logoFilalbumia.png" alt="logo de Filalbumia: El detras del album">
+                </div>
+
+                <!--toogler Btn-->
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!--sidebar-->
+                <div class="sidebar  offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel">
+
+                    <div class="offcanvas-header">
+                        <div class="logo-offcanvas">
+                            <img src="./imagenes/logoFilalbumia.png" alt="logo de Filalbumia: El detras del album">
+                        </div>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+
+                    <!--sidebar body -->
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-center fs-5 flex-grow-1 pe-3">
+                            <li class="nav-item mx-2">
+                                <a class="nav-link active" aria-current="page" href="#inicio">INICIO</a>
+                            </li>
+                            <li class="nav-item mx-2">
+                                <a class="nav-link" href="#albums">ALBUMS</a>
+                            </li>
+                            <li class="nav-item mx-2">
+                                <a class="nav-link" href="#significado">EL DETRAS</a>
+                            </li>
+                            <li class="nav-item mx-2">
+                                <a class="nav-link" href="#foroFull">FORO</a>
+                            </li>
+                        </ul>
+                        <!--Loing/ Sing up-->
+                        <div class="sesion d-flex flex-column flex-lg-row justify-content-center aling-items-center gap-3 ">
+                            <a href="#login" class="login">Login</a>
+                            <a href="#singup" class="singup text-white text-decoration-none px-2 py-1 rounded-4"
+                                style="background-color: #8f3f68">Sing Up</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="contenido">
+    <!--Concepto de la pagina-->
+    <div class="concepto container" id="inicio">
+        <p>La música ha sido un elemento importante para nosotros a lo largo de los años, no es de extrañar que sea el
+            tipo de arte más consumido actualmente al menos en México, pues a donde vayas encontrarás música, en el
+            mercado, en la escuela, en tu celular, etc.</p>
+        <br>
+        <p>Sin embargo, es exactamente eso lo que se llega a ignorar en muchas ocasiones, que es un tipo de arte, pues
+            muchas personas simplemente lo usan de distractor y lo ponen de fondo para que haya ruido solamente,
+            olvidando que esta misma se crea con un propósito en muchos casos, ya sea expresar un sentimiento o una idea
+            y el hecho de ponerla de fondo sin escuchar que dice o sin intentar interpretar esto mismo hace que pierda
+            todo su propósito.</p>
+        <br>
+        <p>Por eso aquí tenemos una pequeña recopilación de álbumes que si te sientas a escuchar que dicen y los conceptos detrás de ello, te pueden dar una grata sorpresa, no decimos que son la mejor iobra creada, que aunque si son buenos realmente es algo subjetivo en muchos casos.</p>
+
+
+    </div>
+    </section>
+
+    <section class="albums" id="albums">
+        <h3>ALBUMS PARA TI</h3>
+    <!--carrete de albums-->
+    <div id="carouselExampleControls" class="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="card">
+                    <div class="img-wrapper">
+                        <img src="./imagenes/KayneWest.jpg" class="" alt="...">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">MY BEAUTIFUL DARK TWISTED FANTASY</h5>
+                        <p class="card-text">Kayne West</p>
+                        <button class="btn btn-primary" id="btnShow" onclick="mostrar1()";>Conoceme</button>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="card">
+                    <div class="img-wrapper">
+                        <img src="./imagenes/Radiohead.jpg" class="" alt="...">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">IN RAINBOWS</h5>
+                        <p class="card-text">Radiohead</p>
+                        <button class="btn btn-primary" id="btnShow" onclick="mostrar2()";>Conoceme</button>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="card">
+                    <div class="img-wrapper">
+                        <img src="./imagenes/PinkFloyd.jpg" class="d-block" alt="...">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">ANIMALS</h5>
+                        <p class="card-text">Pink Floyd</p>
+                        <button class="btn btn-primary" id="btnShow" onclick="mostrar3()";>Conoceme</button>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="card">
+                    <div class="img-wrapper">
+                        <img src="./imagenes/MacMiller.jpg" class="d-block" alt="...">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">THE DIVINE FEMENINE</h5>
+                        <p class="card-text">Mac Miller</p>
+                        <button class="btn btn-primary" id="btnShow" onclick="mostrar4()";>Conoceme</button>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="card">
+                    <div class="img-wrapper">
+                        <img src="./imagenes/DavidBowie.jpg" class="d-block" alt="...">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">BLACKSTAR</h5>
+                        <p class="card-text">David Bowie</p>
+                        <button class="btn btn-primary" id="btnShow" onclick="mostrar5()";>Conoceme</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+
+    <!--Info de cada almbum-->
+    <!--KAYNE WEST-->
+    <div class="album" id="conocemeKyne">
+        <div class="encabezado">
+            <div >
+                <img src="./imagenes/KayneWest.jpg"
+                    alt="portada del album de kayne west:MY BEAUTIFUL DARK TWISTED FANTASY ">
+            </div>
+            <div class="info">
+                <h5>MY BEAUTIFUL DARK TWISTED FANTASY</h5>
+                <p>Este es un álbum de disculpa según el mismo Kanye West, se creo posteriormente a los tres hechos que
+                    más
+                    marcaron su vida; el rompimiento con su amada después de 7 años de relación, la muerte de su madre
+                    Donda
+                    y la gran avalancha de críticas y cancelaciones posteriores al suceso de Taylos Swift en los VMAs.
+                    Aquí
+                    Kanye se da cuenta como llega a ser un estúpido en muchas situaciones a lo largo de su vida en
+                    aspectos
+                    como el amor, las opiniones, actitudes, etc. Donde a pesar de que estos dos primeros temas se
+                    tocaron en
+                    el álbum 808's and heartbreak, no significa que no sea parte de su pasado para llegar a ser
+                    potenciadores en el álbum.
+                    <br> <br>
+                    Aquí se muestra un Kanye West vulnerable pero también fuertemente egoísta de cierta forma, con
+                    algunos
+                    picos de felicidad y orgullo, algo que caracteriza a Kanye West debido a lo que había logrado en ese
+                    entonces, pues su trilogia de The College Dropout, Late Registration y Graduation habian sido
+                    bastante
+                    aclamados en su momento, sumando la gran influencia e impacto que tuvo 808's and heartbreak, siendo
+                    inspiracion para artistas del tamaño como The Weeknd. Es decir este álbum cuenta la historia del
+                    declive
+                    de un artista y persona debido a su arrogancia.
+                </p>
+            </div>
+        </div>
+
+        <div class="recomendaciones">
+
+            <div class="icons container">
+                <div>
+                <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseMusicKw" role="button"
+                    aria-expanded="false" aria-controls="collapseMusicKw">
+                    <i class="bi bi-play-circle-fill "></i>
+                </a>
+                <a class="btn btn-primary" href="">
+                <i class="bi bi-heart"></i>
+                </a>
+                <a class="btn btn-primary" id="btnShow" onclick="ocultar();" href="">
+                <i class="bi bi-disc-fill "></i>
+                </a>
+                <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseComentKw" role="button"
+                    aria-expanded="false" aria-controls="collapseComentkw">
+                <i class="bi bi-chat-square-dots"></i>
+                </a>
+                </div>
+                <div>
+                    <h5>El detras</h5>
+                </div>
+            </div>
+            <hr>
+
+            <!--collapse canciones-->
+            <div class="collapse" id="collapseMusicKw">
+                <div class="kw-m container">
+                    <ul class="canciones">
+                        <li class="d-cancion">
+                            <div class="container-music">
+                                <a class="btn-m btn-primary" data-bs-toggle="collapse" href="#collapseMusic1" role="button"
+                                    aria-expanded="false" aria-controls="collapseMusic1">
+                                    <iframe style="border-radius:12px"
+                                        src="https://open.spotify.com/embed/track/7yNK27ZTpHew0c55VvIJgm?utm_source=generator"
+                                        frameBorder="0" allowfullscreen=""
+                                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                                        loading="lazy"></iframe>
+                                </a>
+                                <button class="btn-m btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMusic1"
+                                    aria-expanded="false" aria-controls="collapseMusic1">
+                                    <i class="bi bi-info-circle"></i>
+                                </button>
+                            </div>
+                            <div class="collapse" id="collapseMusic1">
+                                <div class="d-significado">
+                                    <p>La canción que comienza el álbum nos muestra parte de esa arrogancia y orgullo con
+                                        las
+                                        letras "Can we get much higher?" Haciendo referencia a que después de todos los
+                                        éxitos
+                                        musicales que tuvo al punto de ser llamado de los mejores artistas, raperos y
+                                        compositores ¿qué más puede hacer?, nos explica que fantaseaba con esto, ser
+                                        millonario,
+                                        famoso y amado desde antes pero ahora no tiene que hacer y aún con eso no es
+                                        suficiente
+                                        para curar su dolor, pues intenta calmarlo con drogas y alcohol pero de nada sirve
+                                        por
+                                        que después de ingerirlas solo se siente como alguien débil aumentando su dolor ya
+                                        que
+                                        ahora también se siente mal por ser adicto a estas sustancias y sumando los efectos
+                                        que
+                                        tienen estas sustancias mental y/o físicamente. Empezando su desencia a conocer "el
+                                        lado
+                                        oscuro de la fama".
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="d-cancion">
+                            <div class="container-music ">
+                                <a class="btn-m btn-primary" data-bs-toggle="collapse" href="#collapseMusic2" role="button"
+                                    aria-expanded="false" aria-controls="collapseMusic">
+                                    <iframe style="border-radius:12px"
+                                        src="https://open.spotify.com/embed/track/2gZUPNdnz5Y45eiGxpHGSc?utm_source=generator"
+                                        frameBorder="0" allowfullscreen=""
+                                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                                        loading="lazy"></iframe>
+                                </a>
+                                <button class="btn-m btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMusic2"
+                                    aria-expanded="false" aria-controls="collapseMusic2">
+                                    <i class="bi bi-info-circle"></i>
+                                </button>
+                            </div>
+                            <div class="collapse" id="collapseMusic2">
+                                <div class="d-significado">
+                                    <p>POWER es la inspiración hecha canción y debe ser mencionada por la gran producción
+                                        que
+                                        tiene. Nos muestra un kanye retador, que quiere seguir adelante no importando que,
+                                        ya
+                                        sea los insultos de sus haters, los insultos raciales que ha tenido o inclusive las
+                                        situaciones que ha pasado, sin embargo, no sólo lo dice por si mismo, él cree que
+                                        todos
+                                        deberiamos ser arrogantes y sentirnos altamente poderosos a lo largo de nuestra
+                                        vida.
+                                        Siento yo que el verso más representativo de esta cancion sería "No one man should
+                                        have
+                                        all that power" donde a primera vista parece que se lo dice a sí mismo, pero en sus
+                                        propias palabras menciona "La letra dice que nadie deberia tener todo este poder,
+                                        así
+                                        que si nadie lo debería tener, yo creo que entonces todos deberíamos tenerlo"
+                                        invitandonos a lo anteriormente mencionado. <br>
+                                        Otro picó de ser positivo en este álbum, se ve cuando menciona "In this white man
+                                        world,
+                                        we the ones chosen" sale un kanye retador y seguro de seguir adelante a pesar de ser
+                                        un
+                                        hombre negro en USA, seguido por "So goodnight, cruel world, I'll see you in the
+                                        morning". Cambiando la frase "Goodbye cruel world" mostrada en muchas películas para
+                                        morir y dejar todo atrás, sin embargo lo cambia agregándole el "I'll see you in the
+                                        morning" como amenaza de que despertara para volver a luchar contra el mundo otro
+                                        día
+                                        más. Entre otras cosas, se concluye que es una muy buena canción.
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="d-cancion">
+                            <div class="container-music ">
+                                <a class="btn-m btn-primary" data-bs-toggle="collapse" href="#collapseMusic3" role="button"
+                                    aria-expanded="false" aria-controls="collapseMusic3">
+                                    <iframe style="border-radius:12px"
+                                        src="https://open.spotify.com/embed/track/3DK6m7It6Pw857FcQftMds?utm_source=generator"
+                                        frameBorder="0" allowfullscreen=""
+                                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                                        loading="lazy"></iframe>
+                                </a>
+                                <button class="btn-m btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMusic3"
+                                    aria-expanded="false" aria-controls="collapseMusic3">
+                                    <i class="bi bi-info-circle"></i>
+                                </button>
+                            </div>
+                            <div class="collapse" id="collapseMusic3">
+                                <div class="d-significado">
+                                    <p>Si bien hay otras canciones que empiezan a marcar el declive del artista como All of
+                                        the
+                                        lights, Devil In a New Dress o Monster, esta es el punto culminante, en donde Kanye
+                                        por
+                                        fin pide disculpas, después de sentirse asustado por las críticas y amenazas en
+                                        Devil In
+                                        a New Dress, el le habla a sus seguidores y gente querida para pedir que huyan de
+                                        él,
+                                        por que ya no puede cambiar lo que sucedió y posiblemente no puede cambiarse a sí
+                                        mismo,
+                                        sintiendo que el solamente es bueno para arruinar las cosas. Aceptando sus errores
+                                        del
+                                        pasado en sus relaciones anteriores, asi como los cometidos publicamente a lo largo
+                                        de
+                                        su carrera. Retomando su caída en drogas y alcohol pide que se vayan para que no
+                                        admiren
+                                        a alguien así y que lo odien así como el se odia.
+                                        <br>
+                                        Teniendo un sample donde solamente mencionan "Look at ya(you)" para mostrar una
+                                        realización. Terminando con murmuros de su voz distorsionados por un largo tiempo,
+                                        representando el como se sentía cuando daba una entrevista, pues por más que el
+                                        hablara
+                                        sentía que no se explicaba bien o que no lo entendían.
+                                        Para después continúar con su declive con canciones como Hell Of A Life, Blame Game
+                                        y
+                                        parte de Lost In The world de maneras más específicas.
+                    
+                    
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--collapse de caja de comenatrios o foro individual-->
+            <div class="collapse" id="collapseComentKw">
+                <div class="container">
+                    <div class=" row comentarios justify-content-center">
+                        <div class="col-6">
+                            <form action=""class="form-coment d-flex justify-content-end flex-wrap">
+                                <textarea name="" id="" placeholder="Dinos que te parecio el album :3"></textarea>
+                                <button class="btn" type="button">
+                                    <i class="bi bi-arrow-right-square-fill"></i>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    
+
+    <!--RADIOHEAD-->
+    <div class="album" id="conocemeRh">
+        <div class="encabezado">
+            <div>
+                <img src="./imagenes/Radiohead.jpg" alt="portada del album de Radiohead:IN RAINBOWS">
+            </div>
+            <div class="info">
+                <h5>IN RAINBOWS</h5>
+                <p>La banda Radiohead nos muestra un álbum diferente a lo que había traído con anterioridad, siendo éste
+                    un álbum con toques experimentales que nos habla acerca de la vida, centrándose en el limbo que
+                    experimentamos en esta. Donde nos encontramos entre la vida, el amor y la muerte, es decir no estas
+                    al inicio del arcoiris pero tampoco estas al final donde se encuentra el oro. Es ese punto de la
+                    vida en la cual sientes que se está desperdiciando poco a poco, pierdes el tiempo en cosas que no
+                    quieres hacer, con personas que no puedes conquistar del todo y con ideas que no llegarán a nada.
+                </p>
+            </div>
+        </div>
+
+        <div class="recomendaciones">
+
+            <div class="icons container">
+                <div>
+                <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseMusicRh" role="button"
+                    aria-expanded="false" aria-controls="collapseMusicRh">
+                    <i class="bi bi-play-circle-fill "></i>
+                </a>
+                <a class="btn btn-primary" href="">
+                <i class="bi bi-heart"></i>
+                </a>
+                <a class="btn btn-primary" id="boton" onclick="ocultar();" href="">
+                <i class="bi bi-disc-fill "></i>
+                </a>
+                <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseComentRh" role="button"
+                    aria-expanded="false" aria-controls="collapseComentRh">
+                <i class="bi bi-chat-square-dots"></i>
+                </a>
+                </div>
+                <div>
+                    <h5>El detras</h5>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="collapse" id="collapseMusicRh">
+            <div class="rh-m container">
+                <ul class="canciones">
+                    <li class="d-cancion">
+                        <div class="container-music">
+                            <a class="btn-m btn-primary" data-bs-toggle="collapse" href="#collapseMusic1" role="button"
+                                aria-expanded="false" aria-controls="collapseMusic1">
+                            <iframe style="border-radius:12px"
+                                src="https://open.spotify.com/embed/track/4oXg7xT4ksBxHTx8PcmSXw?utm_source=generator"
+                                 frameBorder="0" allowfullscreen=""
+                                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                                loading="lazy"></iframe>
+                            </a>
+                            <button class="btn-m btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMusic1"
+                                aria-expanded="false" aria-controls="collapseMusic1">
+                                <i class="bi bi-info-circle"></i>
+                            </button>
+                        </div>
+                        <div class="collapse" id="collapseMusic1">
+                        <div class="d-significado">
+                            <p>Una canción compuesta en un compás irregular de 5/4 para simbolizar el miedo y la presión
+                                que representa la muerte sobre nosotros. Este compás no deja que interpretamos la
+                                canción como una canción lenta o más tranquila por más que lo intentemos, así cómo la
+                                vida misma, no controlas el tiempo y este solo avanza y avanza. Sumando a esto, la letra
+                                nos explica esa falta de ambición propia en la que te encuentras en el tráfico o en tu
+                                propia habitación preguntándote si deberías de estar haciendo algo más, si deberías de
+                                estar ahí esperando o haciendo algo de provecho y que en cualquier momento podrías morir
+                                sin hacer algo que te haya llenado.
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                    <li class="d-cancion">
+                        <div class="container-music">
+                            <a class="btn-m btn-primary" data-bs-toggle="collapse" href="#collapseMusic2" role="button"
+                                aria-expanded="false" aria-controls="collapseMusic2">
+                            <iframe style="border-radius:12px"
+                                src="https://open.spotify.com/embed/track/35YyxFpE0ZTOoqFx5bADW8?utm_source=generator"
+                                frameBorder="0" allowfullscreen=""
+                                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                                loading="lazy"></iframe>
+                            </a>
+                            <button class="btn-m btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMusic2"
+                                aria-expanded="false" aria-controls="collapseMusic2">
+                                <i class="bi bi-info-circle"></i>
+                            </button>
+                        </div>
+                        <div class="collapse" id="collapseMusic2">
+                        <div class="d-significado">
+                            <p>Nude nos propone lo que pasaría si todo el mundo decidiera seguir una sola idea, donde
+                                cualquier otra sea mal vista por ser algo fuera de lo usual, aun cuando parezca ser un
+                                beneficio para el mundo. Nosotros tomamos el protagonismo de esta canción, ya que junto
+                                con la premisa a ges dicha, también es una canción en la que uno no se siente feliz por
+                                quien es, entrando en una contradicción donde te sientes como alguien asombroso sabiendo
+                                que no lo eres. Ya que no importa la gran idea revolucionaria que tengas, tu mismo te
+                                sabotearas al final del día, es esa situación en la que tienes grandes pensamientos e
+                                ideas pero cada que vas a crearlas nunca terminan en nada y solamente sientes que
+                                terminas perdiendo el tiempo, recayendo en la idea que toda la sociedad comparte
+                                ignorando a tu verdadero tú a tu tú "desnudo".
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                    <li class="d-cancion">
+                        <div class="container-music">
+                            <a class="btn-m btn-primary" data-bs-toggle="collapse" href="#collapseMusic3" role="button"
+                                aria-expanded="false" aria-controls="collapseMusic3">
+                            <iframe style="border-radius:12px"
+                                src="https://open.spotify.com/embed/track/02ppMPbg1OtEdHgoPqoqju?utm_source=generator"
+                                frameBorder="0" allowfullscreen=""
+                                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                                loading="lazy"></iframe>
+                            </a>
+                            <button class="btn-m btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMusic3"
+                                aria-expanded="false" aria-controls="collapseMusic3">
+                                <i class="bi bi-info-circle"></i>
+                            </button>
+                        </div>
+                        <div class="collapse" id="collapseMusic3">
+                        <div class="d-significado">
+                            <p>La canción que comienza el álbum nos muestra parte de esa arrogancia y orgullo con las
+                                letras "Can we get much higher?" Haciendo referencia a que después de todos los éxitos
+                                musicales que tuvo al punto de ser llamado de los mejores artistas, raperos y
+                                compositores ¿qué más puede hacer?, nos explica que fantaseaba con esto, ser millonario,
+                                famoso y amado desde antes pero ahora no tiene que hacer y aún con eso no es suficiente
+                                para curar su dolor, pues intenta calmarlo con drogas y alcohol pero de nada sirve por
+                                que después de ingerirlas solo se siente como alguien débil aumentando su dolor ya que
+                                ahora también se siente mal por ser adicto a estas sustancias y sumando los efectos que
+                                tienen estas sustancias mental y/o físicamente. Empezando su desencia a conocer "el lado
+                                oscuro de la fama".
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                </ul>
+            </div>
+            </div>
+
+            <div class="collapse" id="collapseComentRh">
+                <div class="container">
+                    <div class=" row comentarios justify-content-center">
+                        <div class="col-6">
+                            <form action=""class="form-coment d-flex justify-content-end flex-wrap">
+                                <textarea name="" id="" placeholder="Dinos que te parecio el album :3"></textarea>
+                                <button class="btn" type="button">
+                                    <i class="bi bi-arrow-right-square-fill"></i>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!--PINK FLOYD-->
+    <div class="album" id="conocemePF">
+        <div class="encabezado">
+            <div>
+                <img src="./imagenes/PinkFloyd.jpg" alt="">
+            </div>
+            <div class="info">
+                <h5>ANIMALS</h5>
+                <p>Pink Floyd una banda que se destaca por su sonido y los conceptos al momento de crear sus proyectos.
+                    <br>
+                    Creo yo, que Pink Floyd es la banda que representa la introducción de la página, ya que sus
+                    canciones al ser largas y lentas se consideran aburridas por las personas al no ser un
+                    entretenimiento o distractor inmediato.
+                    Animals de 1977, es el décimo álbum de Pink Floyd influenciado por la novela "Animal Farm" de George
+                    Orwell’s. Siendo un álbum que se compone de solamente 5 canciones las cuales hacen en conjunto una
+                    crítica política y económica de la industria en los años 70's, aunque como la industria realmente no
+                    ha cambiado, se puede sentir como una crítica a la industria actual de igual manera. Aquí Pink Floyd
+                    nos plantea en un mundo donde las personas son tres tipos de animales, empezando por los cerdos que
+                    son las figuras de autoridad sedientas por poder, continuando con los perros que representan a la
+                    industria y empresarios, dejando por último a las ovejas que representan a nosotroa los ciudadanos
+                    comunes. Aunque por lo que he visto, los puercos y los perros pueden intercambiar roles dependiendo
+                    de como lo interpretes. Trata las desigualdades que hay entre estas clases y como los cerdos y los
+                    puercos quieren el poder sobre las ovejas.
+                </p>
+            </div>
+        </div>
+
+        <div class="recomendaciones">
+
+            <div class="icons container">
+                <div>
+                    <a class="btn-m btn-primary" data-bs-toggle="collapse" href="#collapseMusicPf" role="button"
+                        aria-expanded="false" aria-controls="collapseMusicpF">
+                <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseMusicPf" role="button"
+                    aria-expanded="false" aria-controls="collapseMusicPf">
+                    <i class="bi bi-play-circle-fill "></i>
+                </a>
+                <a class="btn btn-primary" href="">
+                <i class="bi bi-heart"></i>
+                </a>
+                <a class="btn btn-primary" id="boton" onclick="ocultar();" href="">
+                <i class="bi bi-disc-fill "></i>
+                </a>
+                <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseComentPf" role="button"
+                    aria-expanded="false" aria-controls="collapseComentPf">
+                <i class="bi bi-chat-square-dots"></i>
+                </a>
+                </div>
+                <div>
+                    <h5>El detras</h5>
+                </div>
+            </div>
+            
+            <hr>
+
+            <div class="collapse" id="collapseMusicPf">
+            <div class="pf-m container">
+                <ul class="canciones">
+                    <li class="d-cancion">
+                        <div class="container-music">
+                            <a class="btn-m btn-primary" data-bs-toggle="collapse" href="#collapseMusic1" role="button"
+                                aria-expanded="false" aria-controls="collapseMusic1">
+                            <iframe style="border-radius:12px"
+                                src="https://open.spotify.com/embed/track/2jvuMDqBK04WvCYYz5qjvG?utm_source=generator"
+                                 frameBorder="0" allowfullscreen=""
+                                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                                loading="lazy"></iframe>
+                            </a>
+                            <button class="btn-m btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMusic1"
+                                aria-expanded="false" aria-controls="collapseMusic2">
+                                <i class="bi bi-info-circle"></i>
+                            </button>
+                        </div>
+                        <div class="collapse" id="collapseMusic1">
+                        <div class="d-significado">
+                            <p>La primera canción larga del álbum (17:04min) nos plantea a los perros como personas
+                                agresivas que no sólo deben de cuidarse de otros animales como los puercos si no también
+                                de ellos mismos, mostrandonos que estos seres harían lo que sea por conseguir el poder,
+                                basandose en el pensamiento de la supervivencia del más fuerte. <br>
+                                Siendo esta una sociedad o club de traidores y abusadores con quien sea que sea,
+                                intentando mostrarlos como los seres más despreciables de esta cadena y sumando que no
+                                importa cuantos años tengas, si eres parte de este club siempre tendrás que estar atento
+                                procurando tu propio bien todo el tiempo, ya que la única manera de destacar fácilmente
+                                es eliminando a la competencia. <br>
+                                Los perros son sociopatas ya que al final de la canción Roger canta "Who was born in a
+                                house full of pain?", cuestionando a los perros, pues es sabido que el nacer en un hogar
+                                roto o lleno de dolor es muy posible que cree personas inestables, sin empatía o
+                                abusadores. También pregunta "¿quién ha sido entrenado por el hombre?" Y derivados de
+                                esta frase, siendo el hombre una representación del sistema donde los perros trabajan
+                                por y para éste.
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                    <li class="d-cancion">
+                        <div class="container-music">
+                            <a class="btn-m btn-primary" data-bs-toggle="collapse" href="#collapseMusic2" role="button"
+                                aria-expanded="false" aria-controls="collapseMusic2">
+                            <iframe style="border-radius:12px"
+                                src="https://open.spotify.com/embed/track/0gEaeqVRHPzRc7HMXtOKc7?utm_source=generator"
+                                frameBorder="0" allowfullscreen=""
+                                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                                loading="lazy"></iframe>
+                            </a>
+                            <button class="btn-m btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMusic2"
+                                aria-expanded="false" aria-controls="collapseMusic2">
+                                <i class="bi bi-info-circle"></i>
+                            </button>
+                        </div>
+                        <div class="collapse" id="collapseMusic2">
+                        <div class="d-significado">
+                            <p>Los puercos siempre se han visto como la autoridad en diferentes países del mundo, aunque
+                                usualmente son aludidos a la fuerza policial, en este álbum son la autoridad política.
+                                Los puercos son seres que abusan mentalmente de otros animales mediante sus miedos, pues
+                                estos no te harán daño físicamente, pero si intentaran crear escenarios para que los
+                                tengas en un pedestal más alto. <br>
+                                ¿A que me refiero con esto? Los puercos son igual de egoístas que los perros, pero son
+                                más inteligentes en cierta medida, ellos no se mostrarán como una amenaza si no que al
+                                contrario, se mostrarán como los héroes, los salvadores. Son gente que ya tiene el
+                                dinero y los medios, solo le falta el control de las ovejas, por lo que lo hacen
+                                mediante técnicas manipuladoras. Un ejemplo puede ser el hecho de llevarse bien con
+                                alguien por mero interés económico o social, también puede ser la propaganda que estos
+                                mismos crean para intentar dar una imagen que sea más agradable y de más respeto a las
+                                ovejas y lo sigan, todo esto solamente para obtener un beneficio propio, lo cual termina
+                                en corrupción y falsas promesas hacia estas. Donde a lo largo de la canción se muestran
+                                como seres indaciables, pues si desde un inicio ya eran una clase rica con poder, no hay
+                                una razón que no sea la avaricia del por qué hacen todo esto.
+
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                    <li class="d-cancion">
+                        <div class="container-music">
+                            <a class="btn-m btn-primary" data-bs-toggle="collapse" href="#collapseMusic3" role="button"
+                                aria-expanded="false" aria-controls="collapseMusic3">
+                            <iframe style="border-radius:12px"
+                                src="https://open.spotify.com/embed/track/55e99bv2wlgTYtNEYHWtN1?utm_source=generator"
+                                frameBorder="0" allowfullscreen=""
+                                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                                loading="lazy"></iframe>
+                            </a>
+                            <button class="btn-m btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMusic3"
+                                aria-expanded="false" aria-controls="collapseMusic1">
+                                <i class="bi bi-info-circle"></i>
+                            </button>
+                        </div>
+                        <div class="collapse" id="collapseMusic3">
+                        <div class="d-significado">
+                            <p>La última canción larga del álbum nos presenta a las ovejas, que nos representaría a
+                                nosotros, estas son los animales que siguen ciegamente un ideal, un ideal el cual no es
+                                correcto o en su defecto no existe. Para ayudar a explicar esto nos mencionan "I've
+                                looked over Jordan, and I have seen, Things are not what they seem" siendo esta una
+                                referencia biblica a el rio Jordan que cruzaron los israelitas para llegar a la tierra
+                                prometida, pero como menciona al instante "no es lo que parece", por lo que en lo que
+                                están trabajando y en lo que están guiándose no terminara siendo lo que parece. Agregado
+                                a todo esto, a lo largo de la canción muestra la propaganda y la religión como una forma
+                                de control sobre las ovejas, y como esto solo las llevará al matadero a menos que
+                                despierten y se revelen en contra de estas manipulaciones.
+
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                </ul>
+            </div>
+            </div>
+
+            <div class="collapse" id="collapseComentPf">
+                <div class="container">
+                    <div class=" row comentarios justify-content-center">
+                        <div class="col-6">
+                            <form action=""class="form-coment d-flex justify-content-end flex-wrap">
+                                <textarea name="" id="" placeholder="Dinos que te parecio el album :3"></textarea>
+                                <button class="btn" type="button">
+                                    <i class="bi bi-arrow-right-square-fill"></i>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!--MAC MILLER-->
+    <div class="album" id="conocemeMac">
+        <div class="encabezado">
+            <div>
+                <img src="./imagenes/MacMiller.jpg" alt="">
+            </div>
+            <div class="info">
+                <h5>THE DIVINE FEMININE</h5>
+                <p>Mac Miller nos trae un álbum acerca del amor en general. Aunque principalmente se enfoca en las
+                    turbulencias y sucesos que puede pasar una relación para llegar a un amor natural y lindo. <br>
+                    Mac siempre ha sentido que el amor está infravalorado en el mundo actual y que la gente solamente se
+                    pasea por ahí haciéndose la misteriosa o siendo grosera para "ser respetada". Según él, el amor es
+                    un sentimiento muy bonito que se manifiesta de diferentes formas a lo largo de nuestra vida, debes
+                    tratar al mundo y al universo con amor, comparandolo con una mujer que a ti se te hace divina (lo
+                    que da nombre al álbum) sumando la frase "Entre más lo amas menos quieres joderlo", volviendo a
+                    comparar que pasa después de tener sexo con alguien que amas, diciendo que quiere acariciar al
+                    universo después de esto, no quiere tomar un uber y simplemente irse.
+
+                </p>
+            </div>
+        </div>
+        <div class="recomendaciones">
+
+            <div class="icons container">
+                <div>
+                <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseMusicMm" role="button"
+                    aria-expanded="false" aria-controls="collapseExample">
+                    <i class="bi bi-play-circle-fill "></i>
+                </a>
+                <a class="btn btn-primary" href="">
+                <i class="bi bi-heart"></i>
+                </a>
+                <a class="btn btn-primary" id="boton" onclick="ocultar();" href="">
+                <i class="bi bi-disc-fill "></i>
+                </a>
+                <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseComentMm" role="button"
+                    aria-expanded="false" aria-controls="collapseExample">
+                <i class="bi bi-chat-square-dots"></i>
+                </a>
+                </div>
+                <div>
+                    <h5>El detras</h5>
+                </div>
+            </div>
+            <hr>
+
+            <div class="collapse" id="collapseMusicMm">
+            <div class="mm-m container">
+                <ul class="canciones">
+                    <li class="d-cancion">
+                        <div class="container-music">
+                            <a class="btn-m btn-primary" data-bs-toggle="collapse" href="#collapseMusic1" role="button"
+                                aria-expanded="false" aria-controls="collapseMusic1">
+                            <iframe style="border-radius:12px"
+                                src="https://open.spotify.com/embed/track/6hzbRKhJHo6cfCHSnNaDS8?utm_source=generator"
+                                 frameBorder="0" allowfullscreen=""
+                                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                                loading="lazy"></iframe>
+                            </a>
+                            <button class="btn-m btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMusic1"
+                                aria-expanded="false" aria-controls="collapseMusic1">
+                                <i class="bi bi-info-circle"></i>
+                            </button>
+                        </div>
+                        <div class="collapse" id="collapseMusic1">
+                        <div class="d-significado">
+                            <p>La ultima canción del álbum es una balada sexual en la cual a lo largo de esta se deja
+                                ver la pasión que tiene Mac acerca de tener relaciones y del gran atractivo que siente
+                                hacia esta mujer con frases como "Your divinity has turned me into a sinner" o "And your
+                                beauty can even make hell have a winter" Haciendo referencia a que ella es tan ardiente
+                                que si ella estuviera en el infierno este sería frío a comparación. <br>
+                                Y al ser la última canción del álbum, Mac pone al micrófono a su abuela la cual nos
+                                cuenta la historia de amor de ella y su esposo, cuenta como construyeron su vida juntos
+                                por este mismo y que los momentos más dolorosos eran principalmente cuando no se amaban
+                                a sí mismos, por lo que el amor propio es igual de importante que el amor hacia la otra
+                                persona para poder prosperar.
+
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                    <li class="d-cancion">
+                        <div class="container-music">
+                            <a class="btn-m btn-primary" data-bs-toggle="collapse" href="#collapseMusic2" role="button"
+                                aria-expanded="false" aria-controls="collapseMusic2">
+                            <iframe style="border-radius:12px"
+                                src="https://open.spotify.com/embed/track/1OubIZ0ARYCUq5kceYUQiO?utm_source=generator"
+                                 frameBorder="0" allowfullscreen=""
+                                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                                loading="lazy"></iframe>
+                            </a>
+                            <button class="btn-m btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMusic2"
+                                aria-expanded="false" aria-controls="collapseMusic2">
+                                <i class="bi bi-info-circle"></i>
+                            </button>
+                        </div>
+                        <div class="collapse" id="collapseMusic2">
+                        <div class="d-significado">
+                            <p>Mac comienza el álbum con una canción hacia una mujer con la cual ya lleva un tiempo de
+                                vida, desde antes de ser famoso o si quiera tener dinero, una mujer que lo ha acompañado
+                                por tanto tiempo que reconoce que la ama, que llega ser celoso por ella ya que para él
+                                es todo lo que siempre había querido, lo que siempre había deseado, sumando la calma que
+                                le da y el profundo amor que siente al estar con esta persona. Sin embargo, también le
+                                suma el hecho de que el no está bien a solas y que cuando ella no está, él no puede
+                                ponerse de pie por si solo. Muchas veces está pequeña e indirecta parte de la canción se
+                                ve como algo romántico como que se siente muy triste sin ella, sin embargo, en el
+                                contexto de la lucha de Mac Miller contra las drogas y otros problemas estas letras
+                                pueden tomar otra interpretación.
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                    <li class="d-cancion">
+                        <div class="container-music">
+                            <a class="btn-m btn-primary" data-bs-toggle="collapse" href="#collapseMusic3" role="button"
+                                aria-expanded="false" aria-controls="collapseMusic3">
+                            <iframe style="border-radius:12px"
+                                src="https://open.spotify.com/embed/track/2lpygKqzPFtItQ4ss3cgfb?utm_source=generator"
+                                 frameBorder="0" allowfullscreen=""
+                                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                                loading="lazy"></iframe>
+                            </a>
+                            <button class="btn-m btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMusic3"
+                                aria-expanded="false" aria-controls="collapseMusic3">
+                                <i class="bi bi-info-circle"></i>
+                            </button>
+                        </div>
+                        <div class="collapse" id="collapseMusic3">
+                        <div class="d-significado">
+                            <p>En esta ocasión nos habla de alguien que por fin consigue el amor que tanto esperaba de
+                                alguien que tanto admiraba o amaba, diciendonoslo directamente al comienzo de la canción
+                                con Ty Dolla $ign en el coro "I been waitin' all night for this moment, I been waitin'
+                                all year for this moment". Sumando el rechazo que ha tenido a otras mujeres por que "no
+                                eran ella". Estar con ella se siente como un premio, como algo que no siente que sea
+                                real, la canción da un toque sexy al mismo tiempo que un toque de esa felicidad sumada
+                                con angustia de cuando logras obtener algo que no quieres perder nunca. Aún con esto,
+                                Mac no quiere dejar pasar la oportunidad de sentirse buen por estar con la chica que le
+                                gusta y endiosado aunque sea un poco ya que Ariana decía que Mac no era su tipo, pues lo
+                                veía raro. Y si, esta canción es dedicada a Ariaba Grande, la gente tiene la falsa
+                                creencia de que todo el álbum es hacia Ariana, pero no, solo está canción en específico.
+                                Aún con ese pequeña subida de ego, termina reafirmando que haría cualquier cosa por
+                                ella. .
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                </ul>
+            </div>
+            </div>
+
+            <div class="collapse" id="collapseComentMm">
+                <div class="container">
+                    <div class=" row comentarios justify-content-center">
+                        <div class="col-6">
+                            <form action=""class="form-coment d-flex justify-content-end flex-wrap">
+                                <textarea name="" id="" placeholder="Dinos que te parecio el album :3"></textarea>
+                                <button class="btn" type="button">
+                                    <i class="bi bi-arrow-right-square-fill"></i>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!--DAVID BOWIE-->
+    <div class="album" id="conocemeDB">
+        <div class="encabezado">
+            <div>
+                <img src="./imagenes/DavidBowie.jpg" alt="">
+            </div>
+            <div class="info">
+                <h5>BLACKSTAR</h5>
+                <p>La carta de despedida de David Bowie, "Blackstar" es su último álbum lanzado el día de su cumpleaños
+                    número 69. Donde lo encontraremos siendo conciente de que prontamente moriría por el cáncer terminal
+                    que le habían detectado. <br>
+                    Conceptualmente es sencillo, pero sabemos que David no era una persona cualquiera ya que si
+                    indagamos más se vuelve un álbum complicado y asombroso. David Bowie era bastante fanático del
+                    cultismo y las diferentes culturas al rededor del mundo y de los tiempos. Comenzando por el título
+                    del álbum que se llama blackstar por muchas razones, como por ejemplo, hace alusión a cuando los
+                    doctores detectan cáncer en una persona y dicen que detectaron una estrella negra o Blackstar. <br>
+                    Pero también hace referencia a una entidad encontrada en todo el universo que de vez en cuando se
+                    manifiesta en una persona para ilustrarlo de cierta formaaltambien tenemos que añadir que Bowie era
+                    muy fan de Elvis el cual tenía una canción llamada “Blackstar” donde nos dice amgo similar a esto,
+                    mencionando que todo hombre tiene una estrella negra en su hombro y cuando esté mismo logra verla
+                    significa que es tiempo de partir. Junto con todo esto, también es conocido que las estrellas estan
+                    estrechamente conectadas a la magia alrededor del mundo, como con los egipcios que buscaban el sol
+                    negro o estrella negra ya que conectaba con Anubis. El dios más cercano a los difuntos que los
+                    llevaba con osiris donde podían dar cierto regalo u ofrenda al mundo y a esta misma diosa para
+                    permitir su trascendencia, ya que Bowie desde siempre creía que no hay una diferencia entre la vida
+                    o la muerte, simplemente existe esta trascendía en cuanto llegue su momento. Blackstar es esa
+                    ofrenda, donde muestra parte de su pasado, presente y su futuro.
+                </p>
+            </div>
+        </div>
+        <div class="recomendaciones">
+
+            <div class="icons container">
+                <div>
+                <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseMusicDb" role="button"
+                    aria-expanded="false" aria-controls="collapseMusicDb">
+                    <i class="bi bi-play-circle-fill "></i>
+                </a>
+                <a class="btn btn-primary" href="">
+                <i class="bi bi-heart"></i>
+                </a>
+                <a class="btn btn-primary" id="boton" onclick="ocultar();" href="">
+                <i class="bi bi-disc-fill "></i>
+                </a>
+                <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseComentDb" role="button"
+                    aria-expanded="false" aria-controls="collapseComentDb">
+                <i class="bi bi-chat-square-dots"></i>
+                </a>
+                </div>
+                <div>
+                    <h5>El detras</h5>
+                </div>
+            </div>
+            <hr>
+
+            <div class="collapse" id="collapseMusicDb">
+            <div class="db-m container">
+                <ul class="canciones">
+                    <li class="d-cancion">
+                        <div class="container-music">
+                            <a class="btn-m btn-primary" data-bs-toggle="collapse" href="#collapseMusic1" role="button"
+                                aria-expanded="false" aria-controls="collapseMusic1">
+                            <iframe style="border-radius:12px"
+                                src="https://open.spotify.com/embed/track/7CEjBoE7psDI0hXyZbl6mv?utm_source=generator"
+                                 frameBorder="0" allowfullscreen=""
+                                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                                loading="lazy"></iframe>
+                            </a>
+                            <button class="btn-m btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMusic1"
+                                aria-expanded="false" aria-controls="collapseMusic1">
+                                <i class="bi bi-info-circle"></i>
+                            </button>
+                        </div>
+                        <div class="collapse" id="collapseMusic1">
+                        <div class="d-significado">
+                            <p>Al igual que el resto del álbum esta es una canción un poco bastante interpretable, pues
+                                muchas personas la llegan a relacionar con la promiscuidad y las relaciones tóxicas en
+                                esta. El mismo título de la canción menciona esa relación amor odio con una chica ya que
+                                su traducción es "Es una pena que fuera una puta". Con frases como "Man, she punched me
+                                like a dude" diciendo que esta mujer que tiene una falta de "feminidad tradicional", lo
+                                cual le genera un conflicto mental y hace que también se encuentre confundido con cómo
+                                se siente al estar con ella, ya que si bien la ama y tiene sentimientos hacia ella, está
+                                misma tiene actitudes que lo alejan de sentirse bien estando ahí. Dejándonos ver poco a
+                                poco como la violencia que sufre ahí se transforma poco a poco en una pasión, creando
+                                todo un caos que se ve reflejado en la voz y la instrumental de la canción. <br>
+                                Siendo esta una canción de las turbulencias que uno mismo puede sentir por alguien. ¿Y
+                                que tiene que ver esto con el contexto del álbum? Para empezar debemos recordar que este
+                                es un viaje a lo largo de la vida de Bowie, la cual en cuanto a amoríos fue bastante
+                                amplia y en cierto sentido se arrepiente de ello.
+                                Aunque también muchas personas lo relacionan con una relación entre el tiempo y Bowie
+                                después de haber recibido la noticia de que tiene cáncer, el tiempo lo golpea
+                                fuertemente el saber que se le está terminando y a lo largo de la canción menciona como
+                                es fascinante que esta mujer le robe el dinero, representando de nuevo ese amor-odio y
+                                también que el dinero no se va a ir con él en cuanto muera, creando así una relación con
+                                alguien que no puedes controlar ni un mínimo que poco a poco está acabando con él y aún
+                                así decide intentar aferrarse a ella.
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                    <li class="d-cancion">
+                        <div class="container-music">
+                            <a class="btn-m btn-primary" data-bs-toggle="collapse" href="#collapseMusic2" role="button"
+                                aria-expanded="false" aria-controls="collapseMusic2">
+                            <iframe style="border-radius:12px"
+                                src="https://open.spotify.com/embed/track/7rFN0DhIFPjAWG1EaHO2F0?utm_source=generator"
+                                 frameBorder="0" allowfullscreen=""
+                                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                                loading="lazy"></iframe>
+                            </a>
+                            <button class="btn-m btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMusic2"
+                                aria-expanded="false" aria-controls="collapseMusic2">
+                                <i class="bi bi-info-circle"></i>
+                            </button>
+                        </div>
+                        <div class="collapse" id="collapseMusic2">
+                        <div class="d-significado">
+                            <p>La canción que representa Blackstar, tiene como nombre Lazarus debido a que hace
+                                referencia a Lazaro, un personaje bíblico el cual fue resucitado por dios 4 dias después
+                                de su muerte, ya que este personaje murio por una enfermedad que lo mataba poco a poco.
+                                <br>
+                                En esta canción Bowie acepta su muerte por el cáncer al comenzar la canción con "Look up
+                                here, I'm in heaven" y "I've got scars that can't be seen". Sin embargo, al aceptar su
+                                muerte quiere hacerlo de una manera que le gustaría, pues en el videoclip se ve como
+                                David intenta levantarse de la cama y al hacerlo se acerca a una mesita donde empieza a
+                                escribir en una libreta que tenía estrella negra dibujada, lo cual creo que se explica
+                                por sí mismo. <br>
+                                Aún con esto, recordemos que David no era creyente de la muerte pura, por lo que el
+                                inicio de la canción también puede interpretarse como que el ya se ve en esa
+                                trascendencia, para él no existe un desaparecer de este mundo y aparecer en el otro,
+                                para él es solamente una "transformación" en cierto sentido, pues nosotros ya
+                                coexistimos en ambos mundos, solo se necesita trascender a éste otro. En el cual él será
+                                libre, y no estará en peligro o expuesto como casi siempre sentía que estaba en este
+                                mundo al ser famoso, donde podrá desconectarse de todo lo que habíaen este incluyendo
+                                familia y amigos lastimosamente, pero al mismo tiempo compara esta desconexión a cuando
+                                se encontraba en el estudio para hacer música y se aislaba, preguntándose, "Ain't that
+                                just like me?".
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                    <li class="d-cancion">
+                        <div class="container-music">
+                            <a class="btn-m btn-primary" data-bs-toggle="collapse" href="#collapseMusic3" role="button"
+                                aria-expanded="false" aria-controls="collapseMusic3">
+                            <iframe style="border-radius:12px"
+                                src="https://open.spotify.com/embed/track/4iXSEbAYfD0G4bqTkQCfSn?utm_source=generator"
+                                frameBorder="0" allowfullscreen=""
+                                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                                loading="lazy"></iframe>
+                            </a>
+                            <button class="btn-m btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMusic3"
+                                aria-expanded="false" aria-controls="collapseMusic3">
+                                <i class="bi bi-info-circle"></i>
+                            </button>
+                        </div>
+                        <div class="collapse" id="collapseMusic3">
+                        <div class="d-significado">
+                            <p>La ultima canción del álbum nos habla de un David Bowie que ya se ha "mudado"
+                                definitivamente. Esta canción empieza con una harmonica tomada de su canción "A New
+                                Career in a New Town" la cual el mismo nombre explica bastante bien el hecho de que se
+                                ha ido de un lugar para comenzar de nuevo en otro. <br>
+                                Sin embargo, las líricas nos dicen una cosa un poco diferente, "I know something's very
+                                wrong, The pulse returns the prodigal sons" ya que Bowie si se va de este mundo, pero no
+                                para ir a otro si no más bien para regresar al suyo, pues Bowie había encarnado o se
+                                había presentado varias veces como un ser de otro lugar que no era la tierra, y estas
+                                letras nos dicen explicitamente eso, Bowie indirectamente nos dice que el es un hijo
+                                pródigo que para los que no sepan que es, es un término que hace referencia a un hijo en
+                                su época de rebeldía, indirectamente diciendo que llegó a la tierra en esa época pero
+                                que ahora es su momento de volver a casa aún que se siente mal por no poder dar más
+                                música o amor a este mundo ya que esta era su pasión "I can't give everything, I can't
+                                give everything away".
+                                .
+                            </p>
+                        </div>
+                    </div>
+                </li>
+            </div>
+            </div>
+
+            <div class="collapse" id="collapseComentDb">
+                <div class="container">
+                    <div class=" row comentarios justify-content-center">
+                        <div class="col-6">
+                            <form action=""class="form-coment d-flex justify-content-end flex-wrap">
+                                <textarea name="" id="" placeholder="Dinos que te parecio el album :3"></textarea>
+                                <button class="btn" type="button">
+                                    <i class="bi bi-arrow-right-square-fill"></i>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+    <!--FORO-->
+    <section>
+    <div class="foro">
+        <hr>
+        <h5 id="foroFull">FORO / COMENTARIOS </h5>
+
+        <div class="container">
+            <div class=" row foro justify-content-start">
+                <div class="col-8">
+                    <form action=""class="form-coment-foro d-flex justify-content-end flex-wrap">
+                        <textarea name="" id="" placeholder="Comentanos, recomiendanos otras canciones o cuentanos otros datos :3"></textarea>
+                        <button class="btn" type="button">
+                            <i class="bi bi-arrow-right-square-fill"></i>
+                        </button>
+                    </form>
+    
+                </div>
+    </div>
+    </section>
+</section>
+
+    <!--FOOTER-->
+    <footer class="container">
+        <div class="row">
+        <div class="capuchulovs col-8">
+            <p>Conocé nuestra <span>Política de privacidad </span>| ©2024 <span>capuchulovs-filalbumia</span>. Todos los
+                derechos
+                reservados.
+            </p>
+        </div>
+        <div class="us col-4">
+            <p>Gracias por visitarnos</p>
+            <div class="socialMedia">
+                <i class="bi bi-instagram"></i>
+                <i class="bi bi-heart-fill"></i>
+                <i class="bi bi-spotify"></i>
+            </div>
+        </div>
+        </div>
+
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
